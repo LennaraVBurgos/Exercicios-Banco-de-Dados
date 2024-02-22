@@ -3,6 +3,12 @@ import sqlite3
 conexao = sqlite3.connect('banco_cliente')
 cursor = conexao.cursor()
 
+#Selecione o nome e a idade dos clientes com idade superior a 30 anos.
+
+dados = cursor.execute ('SELECT * FROM Clientes where idade > 30')
+for cl in dados:
+    print(cl)
+
 
 # Calcule o saldo médio dos clientes.
 
